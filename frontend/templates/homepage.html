@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Blog</title>
+    <link rel="stylesheet" href="/assets/pico.min.css">
+    <script src="/assets/htmx.min.js"></script>
+<style>
+        body, html {
+            height: 100%;
+            margin: 0;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        main {
+            flex: 1;
+        }
+        footer {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>My Simple Blog</h1>
+            <!-- Add navigation or other header content here -->
+        </header>
+
+        <main id="blog-posts" hx-get="/blog/posts/newest" hx-trigger="load">
+            <!-- Blog posts will be loaded here dynamically -->
+        </main>
+
+        <footer>
+            <p>© 2024 Simple Blog</p>
+        </footer>
+    </div>
+</body>
+</html>

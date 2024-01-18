@@ -1,0 +1,5 @@
+<article>
+  <header>Header</header>
+  Body
+  <footer>Footer</footer>
+</article>
